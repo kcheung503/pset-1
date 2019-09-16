@@ -43,7 +43,7 @@ public class ProblemSet1 {
          final double widthInCM = 2.54 * 11;
          final double perimeter = (widthInCM * 2) + (lengthInCM * 2);
          final double perimeterRound = Math.round(perimeter * 100.0)/100.0;
-         System.out.println("\n" + perimeter + " square centimeters.");
+         System.out.println("\n" + perimeterRound + " centimeters.");
 
         /*
          * Exercise 3.
@@ -52,7 +52,10 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-
+         double lengthSquared = 8.5 * 8.5;
+         double widthSquared = 11 * 11;
+         double hypotenuse = Math.round(java.lang.Math.sqrt(lengthSquared + widthSquared)*100.0)/100.0;
+         System.out.println("\n" + hypotenuse + " inches.");
 
         /*
          * Exercise 4.
