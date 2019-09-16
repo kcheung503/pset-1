@@ -42,6 +42,7 @@ public class ProblemSet1 {
          final double lengthInCM = 2.54 * 8.5;
          final double widthInCM = 2.54 * 11;
          final double perimeter = (widthInCM * 2) + (lengthInCM * 2);
+         final double perimeterRound = Math.round(perimeter * 100.0)/100.0;
          System.out.println("\n" + perimeter + " square centimeters.");
 
         /*
@@ -51,7 +52,7 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-         final double
+
 
         /*
          * Exercise 4.
