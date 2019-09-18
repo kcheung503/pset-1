@@ -29,7 +29,7 @@ public class ProblemSet1 {
         final double widthMillimeter = width * inToMillimeters;
         final double area = lengthMillimeters * widthMillimeter;
         final double areaRound = Math.round(area * 100.0)/100.0;
-        System.out.println("\n" + areaRound + " square millimeters.");
+        System.out.printf("\n%,.2f %s\n", areaRound, "square millimeters.");
 
 
         /*
@@ -52,9 +52,9 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-         double lengthSquared = 8.5 * 8.5;
-         double widthSquared = 11 * 11;
-         double hypotenuse = Math.round(java.lang.Math.sqrt(lengthSquared + widthSquared)*100.0)/100.0;
+         final double lengthSquared = 8.5 * 8.5;
+         final double widthSquared = 11 * 11;
+         final double hypotenuse = Math.round(java.lang.Math.sqrt(lengthSquared + widthSquared)*100.0)/100.0;
          System.out.println("\n" + hypotenuse + " inches.");
 
         /*
@@ -83,7 +83,16 @@ public class ProblemSet1 {
          * will I make this week?
          */
 
-
+         final double wage = 12.50;
+         final double m = wage * 7.5;
+         final double tu = wage * 8;
+         final double w = wage * 10.5;
+         final double th = wage * 9.5;
+         final double f = wage * 6;
+         final double sa = wage * 11.5;
+         final double su = 0;
+         final double check = Math.round((m + tu + w + th + f + sa + su)*100.0)/100.0;
+         System.out.printf("\n%$s,.2f\n", check, ".");
 
         /*
          * Exercise 6.
