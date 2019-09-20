@@ -23,13 +23,13 @@ public class ProblemSet1 {
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-        final double length = 8.5;
-        final double width = 11;
-        final double inToMillimeters = 25.4;
-        final double lengthMillimeters = length * inToMillimeters;
-        final double widthMillimeter = width * inToMillimeters;
-        final double area = lengthMillimeters * widthMillimeter;
-        final double areaRound = Math.round(area * 100.0)/100.0;
+        final double LENGTH = 8.5;
+        final double WIDTH = 11;
+        final double INTOMILLIMETERS = 25.4;
+        double lengthMillimeters = LENGTH * INTOMILLIMETERS;
+        double widthMillimeter = WIDTH * INTOMILLIMETERS;
+        double area = lengthMillimeters * widthMillimeter;
+        double areaRound = Math.round(area * 100.0)/100.0;
         System.out.printf("\n%,.2f %s\n", areaRound, "square millimeters.");
 
 
@@ -39,11 +39,11 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-         final double inToCM = 2.54;
-         final double lengthInCM = 2.54 * 8.5;
-         final double widthInCM = 2.54 * 11;
-         final double perimeter = (widthInCM * 2) + (lengthInCM * 2);
-         final double perimeterRound = Math.round(perimeter * 100.0)/100.0;
+         final double INTOCM = 2.54;
+         double lengthInCM = INTOCM * 8.5;
+         double widthInCM = INTOCM * 11;
+         double perimeter = (widthInCM * 2) + (lengthInCM * 2);
+         double perimeterRound = Math.round(perimeter * 100.0)/100.0;
          System.out.println("\n" + perimeterRound + " centimeters.");
 
         /*
@@ -53,9 +53,9 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-         final double lengthSquared = 8.5 * 8.5;
-         final double widthSquared = 11 * 11;
-         final double hypotenuse = Math.round(java.lang.Math.sqrt(lengthSquared + widthSquared)*100.0)/100.0;
+         double lengthSquared = 8.5 * 8.5;
+         double widthSquared = 11 * 11;
+         double hypotenuse = Math.round(java.lang.Math.sqrt(lengthSquared + widthSquared)*100.0)/100.0;
          System.out.println("\n" + hypotenuse + " inches.");
 
         /*
@@ -65,30 +65,30 @@ public class ProblemSet1 {
          * what marking period grade will I get?
          */
 
-        int homework1 = 88;
-        int homework2 = 91;
-        int homework3 = 0;
-        int quiz1 = 84;
-        int quiz2 = 89;
-        int quiz3 = 93;
-        int test1 = 74;
-        int test2 = 87;
-        int test3 = 82;
+         final int HOMEWORK1 = 88;
+         final int HOMEWORK2 = 91;
+         final int HOMEWORK3 = 0;
+         final int QUIZ1 = 84;
+         final int QUIZ2 = 89;
+         final int QUIZ3 = 93;
+         final int TEST1 = 74;
+         final int TEST2 = 87;
+         final int TEST3 = 82;
 
-        final double homeworkWeight = 0.15;
-        final double quizWeight = 0.35;
-        final double testWeight = 0.5;
-        final double homeworkAvg = (homework1 + homework2 + homework3);
-        final double homeworkAvg2 = (homeworkAvg/3);
-        final double homeworkAvg3 = (homeworkAvg2 * homeworkWeight);
-        final double quizAvg = (quiz1 + quiz2 + quiz3);
-        final double quizAvg2 = (quizAvg/3);
-        final double quizAvg3 = (quizAvg2 * quizWeight);
-        final double testAvg = (test1 + test2 + test3);
-        final double testAvg2 = (testAvg/3);
-        final double testAvg3 = (testAvg2 * testWeight);
-        final double mpGrade = Math.round((homeworkAvg3 + quizAvg3 + testAvg3)*100.0)/100.0;
-        System.out.println("\n" + mpGrade + "%.");
+         final double HOMEWORKWEIGHT = 0.15;
+         final double QUIZWEIGHT = 0.35;
+         final double TESTWEIGHT = 0.5;
+         double homeworkAvg = (HOMEWORK1 + HOMEWORK2 + HOMEWORK3);
+         double homeworkAvg2 = (homeworkAvg/3);
+         double homeworkAvg3 = (homeworkAvg2 * HOMEWORKWEIGHT);
+         double quizAvg = (QUIZ1 + QUIZ2 + QUIZ3);
+         double quizAvg2 = (quizAvg/3);
+         double quizAvg3 = (quizAvg2 * QUIZWEIGHT);
+         double testAvg = (TEST1 + TEST2 + TEST3);
+         double testAvg2 = (testAvg/3);
+         double testAvg3 = (testAvg2 * TESTWEIGHT);
+         double mpGrade = Math.round((homeworkAvg3 + quizAvg3 + testAvg3)*100.0)/100.0;
+         System.out.println("\n" + mpGrade + "%.");
 
         /*
          * Exercise 5.
@@ -97,17 +97,17 @@ public class ProblemSet1 {
          * will I make this week?
          */
 
-         final double wage = 12.50;
-         final double m = wage * 7.5;
-         final double tu = wage * 8;
-         final double w = wage * 10.5;
-         final double th = wage * 9.5;
-         final double f = wage * 6;
-         final double sa = wage * 11.5;
-         final double su = 0;
-         final double check = Math.round((m + tu + w + th + f + sa + su)*100.0)/100.0;
+         final double WAGE = 12.50;
+         double m = WAGE * 7.5;
+         double tu = WAGE * 8;
+         double w = WAGE * 10.5;
+         double th = WAGE * 9.5;
+         double f = WAGE * 6;
+         double sa = WAGE * 11.5;
+         double su = 0;
+         double check = Math.round((m + tu + w + th + f + sa + su)*100.0)/100.0;
          NumberFormat currencyformat = NumberFormat.getCurrencyInstance();
-         System.out.printf("\n" + currencyformat.format(check) + ".");
+         System.out.printf("\n" + currencyformat.format(check) + ".\n");
 
         /*
          * Exercise 6.
@@ -115,10 +115,15 @@ public class ProblemSet1 {
          * What is my take-home pay each check?
          */
 
-         double salary = 117000;
-         double fedTax = 0.240;
-         double incomeTax = 0.0637;
-         double contribution = 0.07;
+         final double SALARY = 117000;
+         double biweekly = 117000/24;
+         final double FEDTAX = 0.24;
+         final double INCOMETAX = 0.0637;
+         final double CONTRIBUTION = 0.07;
+         double salaryContribution = (1-CONTRIBUTION) * biweekly;
+         double finalSalary = (1-INCOMETAX) * (1-FEDTAX) * salaryContribution;
+         System.out.printf("\n" + currencyformat.format(finalSalary) + ".\n");
+
 
         /*
          * Exercise 7.
@@ -127,6 +132,13 @@ public class ProblemSet1 {
          * people will be on the last bus?
          */
 
+         final int STUDENTS = 273;
+         final int TEACHERS = 28;
+         final int BUSCAPACITY = 54;
+         int totalCount = STUDENTS + TEACHERS;
+         int totalBuses = (totalCount / BUSCAPACITY) + 1;
+         int lastBusCount = totalCount % BUSCAPACITY;
+         System.out.println("\n" + totalBuses + " buses are needed, with " + lastBusCount + " passengers on the last bus ");
 
 
         /*
@@ -135,7 +147,11 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
 
-
+         final double CORNHOLELENGTH = 24;
+         final double CORNHOLEWIDTH = 48;
+         final double CORNHOLEDIAMETER = 6;
+         double surfaceArea = (CORNHOLELENGTH * CORNHOLEWIDTH) - (Math.PI * Math.pow((CORNHOLEDIAMETER / 2), 2));
+         System.out.printf("\n%.2f %s\n", surfaceArea, "square inches.");
 
         /*
          * Exercise 9.
@@ -151,7 +167,10 @@ public class ProblemSet1 {
          * What is the wind chill?
          */
 
-
+         double temperature = 38;
+         double windSpeed = 14;
+         double windChill = 35.74 + (.6215 * temperature) + (((.4275 * temperature) - 35.75) * Math.pow(windSpeed, .16));
+         System.out.printf("\n%.1f %s\n", windChill, "degrees.");
 
     }
 }
