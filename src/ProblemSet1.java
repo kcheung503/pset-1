@@ -75,10 +75,19 @@ public class ProblemSet1 {
         int test2 = 87;
         int test3 = 82;
 
-        final double homeworkAvg = (((88 + 91 + 0)/3)*0.15);
-        final double quizAvg = (((84 + 89 + 93)/3)*0.35);
-        final double testAvg = (((74 + 87 + 82)/3)*0.5);
-        final double mpGrade = (homeworkAvg + quizAvg + testAvg);
+        final double homeworkWeight = 0.15;
+        final double quizWeight = 0.35;
+        final double testWeight = 0.5;
+        final double homeworkAvg = (homework1 + homework2 + homework3);
+        final double homeworkAvg2 = (homeworkAvg/3);
+        final double homeworkAvg3 = (homeworkAvg2 * homeworkWeight);
+        final double quizAvg = (quiz1 + quiz2 + quiz3);
+        final double quizAvg2 = (quizAvg/3);
+        final double quizAvg3 = (quizAvg2 * quizWeight);
+        final double testAvg = (test1 + test2 + test3);
+        final double testAvg2 = (testAvg/3);
+        final double testAvg3 = (testAvg2 * testWeight);
+        final double mpGrade = Math.round((homeworkAvg3 + quizAvg3 + testAvg3)*100.0)/100.0;
         System.out.println("\n" + mpGrade + "%.");
 
         /*
@@ -106,10 +115,10 @@ public class ProblemSet1 {
          * What is my take-home pay each check?
          */
 
-         // double salary = 117000
-         // double fedTax = 0.240;
-         // double incomeTax = 0.0637;
-         // double contribution = 0.07;
+         double salary = 117000;
+         double fedTax = 0.240;
+         double incomeTax = 0.0637;
+         double contribution = 0.07;
 
         /*
          * Exercise 7.
