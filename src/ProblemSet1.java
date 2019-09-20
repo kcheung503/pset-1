@@ -138,7 +138,7 @@ public class ProblemSet1 {
          int totalCount = STUDENTS + TEACHERS;
          int totalBuses = (totalCount / BUSCAPACITY) + 1;
          int lastBusCount = totalCount % BUSCAPACITY;
-         System.out.println("\n" + totalBuses + " buses are needed, with " + lastBusCount + " passengers on the last bus ");
+         System.out.println("\n" + totalBuses + " buses are needed, with " + lastBusCount + " passengers on the last bus. ");
 
 
         /*
@@ -167,9 +167,9 @@ public class ProblemSet1 {
          * What is the wind chill?
          */
 
-         double temperature = 38;
-         double windSpeed = 14;
-         double windChill = 35.74 + (.6215 * temperature) + (((.4275 * temperature) - 35.75) * Math.pow(windSpeed, .16));
+         final double TEMPERATURE = 38;
+         final double WINDSPEED = 14;
+         double windChill = 35.74 + (.6215 * TEMPERATURE) + (((.4275 * TEMPERATURE) - 35.75) * Math.pow(WINDSPEED, .16));
          System.out.printf("\n%.1f %s\n", windChill, "degrees.");
 
     }
