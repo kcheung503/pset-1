@@ -25,9 +25,9 @@ public class ProblemSet1 {
 
         final double LENGTH = 8.5;
         final double WIDTH = 11;
-        final double INTOMILLIMETERS = 25.4;
-        double lengthMillimeters = LENGTH * INTOMILLIMETERS;
-        double widthMillimeter = WIDTH * INTOMILLIMETERS;
+        final double IN_TO_MILLIMETERS = 25.4;
+        double lengthMillimeters = LENGTH * IN_TO_MILLIMETERS;
+        double widthMillimeter = WIDTH * IN_TO_MILLIMETERS;
         double area = lengthMillimeters * widthMillimeter;
         double areaRound = Math.round(area * 100.0)/100.0;
         System.out.printf("\n%,.2f %s\n", areaRound, "square millimeters.");
@@ -39,9 +39,9 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-         final double INTOCM = 2.54;
-         double lengthInCM = INTOCM * 8.5;
-         double widthInCM = INTOCM * 11;
+         final double IN_TO_CM = 2.54;
+         double lengthInCM = IN_TO_CM * 8.5;
+         double widthInCM = IN_TO_CM * 11;
          double perimeter = (widthInCM * 2) + (lengthInCM * 2);
          double perimeterRound = Math.round(perimeter * 100.0)/100.0;
          System.out.println("\n" + perimeterRound + " centimeters.");
@@ -75,18 +75,18 @@ public class ProblemSet1 {
          final int TEST2 = 87;
          final int TEST3 = 82;
 
-         final double HOMEWORKWEIGHT = 0.15;
-         final double QUIZWEIGHT = 0.35;
-         final double TESTWEIGHT = 0.5;
+         final double HOMEWORK_WEIGHT = 0.15;
+         final double QUIZ_WEIGHT = 0.35;
+         final double TEST_WEIGHT = 0.5;
          double homeworkAvg = (HOMEWORK1 + HOMEWORK2 + HOMEWORK3);
          double homeworkAvg2 = (homeworkAvg/3);
-         double homeworkAvg3 = (homeworkAvg2 * HOMEWORKWEIGHT);
+         double homeworkAvg3 = (homeworkAvg2 * HOMEWORK_WEIGHT);
          double quizAvg = (QUIZ1 + QUIZ2 + QUIZ3);
          double quizAvg2 = (quizAvg/3);
-         double quizAvg3 = (quizAvg2 * QUIZWEIGHT);
+         double quizAvg3 = (quizAvg2 * QUIZ_WEIGHT);
          double testAvg = (TEST1 + TEST2 + TEST3);
          double testAvg2 = (testAvg/3);
-         double testAvg3 = (testAvg2 * TESTWEIGHT);
+         double testAvg3 = (testAvg2 * TEST_WEIGHT);
          double mpGrade = Math.round((homeworkAvg3 + quizAvg3 + testAvg3)*100.0)/100.0;
          System.out.println("\n" + mpGrade + "%.");
 
@@ -117,11 +117,11 @@ public class ProblemSet1 {
 
          final double SALARY = 117000;
          double biweekly = 117000/24;
-         final double FEDTAX = 0.24;
-         final double INCOMETAX = 0.0637;
+         final double FED_TAX = 0.24;
+         final double INCOME_TAX = 0.0637;
          final double CONTRIBUTION = 0.07;
          double salaryContribution = (1-CONTRIBUTION) * biweekly;
-         double finalSalary = (1-INCOMETAX) * (1-FEDTAX) * salaryContribution;
+         double finalSalary = (1-INCOME_TAX) * (1-FED_TAX) * salaryContribution;
          System.out.printf("\n" + currencyformat.format(finalSalary) + ".\n");
 
 
@@ -134,10 +134,10 @@ public class ProblemSet1 {
 
          final int STUDENTS = 273;
          final int TEACHERS = 28;
-         final int BUSCAPACITY = 54;
+         final int BUS_CAPACITY = 54;
          int totalCount = STUDENTS + TEACHERS;
-         int totalBuses = (totalCount / BUSCAPACITY) + 1;
-         int lastBusCount = totalCount % BUSCAPACITY;
+         int totalBuses = (totalCount / BUS_CAPACITY) + 1;
+         int lastBusCount = totalCount % BUS_CAPACITY;
          System.out.println("\n" + totalBuses + " buses are needed, with " + lastBusCount + " passengers on the last bus. ");
 
 
@@ -147,10 +147,10 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
 
-         final double CORNHOLELENGTH = 24;
-         final double CORNHOLEWIDTH = 48;
-         final double CORNHOLEDIAMETER = 6;
-         double surfaceArea = (CORNHOLELENGTH * CORNHOLEWIDTH) - (Math.PI * Math.pow((CORNHOLEDIAMETER / 2), 2));
+         final double CORNHOLE_LENGTH = 24;
+         final double CORNHOLE_WIDTH = 48;
+         final double CORNHOLE_DIAMETER = 6;
+         double surfaceArea = (CORNHOLE_LENGTH * CORNHOLE_WIDTH) - (Math.PI * Math.pow((CORNHOLE_DIAMETER / 2), 2));
          System.out.printf("\n%.2f %s\n", surfaceArea, "square inches.");
 
         /*
@@ -159,7 +159,17 @@ public class ProblemSet1 {
          * Are the years 2020, 2100, and 2400 leap years?
          */
 
+         int currentYear = 2020;
+         boolean leapYear = (currentYear%4)<(currentYear%100) || (currentYear%400==0);
+         System.out.println("\n" + currentYear + " is a leap year..." + leapYear + ".");
 
+         currentYear = 2100;
+         leapYear = (currentYear%4)<(currentYear%100) || (currentYear%400==0);
+         System.out.println(currentYear + " is a leap year..." + leapYear + ".");
+
+         currentYear = 2400;
+         leapYear = (currentYear%4)<(currentYear%100) || (currentYear%400==0);
+         System.out.println(currentYear + " is a leap year..." + leapYear + ".");
 
         /*
          * Exercise 10.
@@ -168,8 +178,8 @@ public class ProblemSet1 {
          */
 
          final double TEMPERATURE = 38;
-         final double WINDSPEED = 14;
-         double windChill = 35.74 + (.6215 * TEMPERATURE) + (((.4275 * TEMPERATURE) - 35.75) * Math.pow(WINDSPEED, .16));
+         final double WIND_SPEED = 14;
+         double windChill = 35.74 + (.6215 * TEMPERATURE) + (((.4275 * TEMPERATURE) - 35.75) * Math.pow(WIND_SPEED, .16));
          System.out.printf("\n%.1f %s\n", windChill, "degrees.");
 
     }
